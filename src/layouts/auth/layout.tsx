@@ -49,12 +49,7 @@ export function AuthLayout({
           This is an info Alert.
         </Alert>
       ),
-      leftArea: (
-        <>
-          {/** @slot Logo */}
-          <Logo sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} />
-        </>
-      ),
+      leftArea: <>{/** @slot Logo */}</>,
       rightArea: (
         <Box sx={{ display: 'flex', alignItems: 'center', gap: { xs: 1, sm: 1.5 } }}>
           {/** @slot Help link */}

@@ -72,14 +72,16 @@ export function HeaderSection({
         {slots?.leftArea}
         <HeaderCenterArea {...slotProps?.centerArea}>{slots?.centerArea}</HeaderCenterArea>
         {slots?.rightArea}
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-          <Typography variant="h6">{username}</Typography>
-          <Tooltip title="Logout">
-            <IconButton onClick={() => removeToken()} size="small">
-              <SvgColor src="/assets/icons/ic-exit.svg" />
-            </IconButton>
-          </Tooltip>
-        </Box>
+        {getUserName() && (
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+            <Typography variant="h6">{username}</Typography>
+            <Tooltip title="Logout">
+              <IconButton onClick={() => removeToken()} size="small">
+                <SvgColor src="/assets/icons/ic-exit.svg" />
+              </IconButton>
+            </Tooltip>
+          </Box>
+        )}
       </HeaderContainer>
 
       {slots?.bottomArea}
