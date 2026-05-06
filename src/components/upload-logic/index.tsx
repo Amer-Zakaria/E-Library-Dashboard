@@ -272,7 +272,7 @@ export function UploadSingle<T>({
                 backgroundColor: '#fafafa',
               }}
             >
-              {targetedFile !== 'pdf' && (
+              {targetedFile !== 'pdf' && targetedFile !== 'audio' && (
                 <Box
                   component="img"
                   src={constructUrl(existingFile)}
