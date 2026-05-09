@@ -152,7 +152,10 @@ export function OverviewAnalyticsView() {
         </Grid>
 
         <Grid size={{ xs: 12 }}>
-          <AnalyticsUserTable title="User Activities" subheader="Engagement metrics by user" />
+          <AnalyticsUserTable
+            title="User Activities"
+            subheader="User last seen, total downloads, opened sessions (counted every 30-minutes), total number of downloads, and contents view frequency for each user"
+          />
         </Grid>
       </Grid>
     </DashboardContent>

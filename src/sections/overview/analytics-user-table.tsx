@@ -57,7 +57,7 @@ export function AnalyticsUserTable({ title, subheader, ...other }: any) {
 
   return (
     <Card {...other}>
-      <CardHeader title={title} subheader={subheader} sx={{ mb: 3, pl: 0 }} />
+      <CardHeader title={title} subheader={subheader} sx={{ mb: 3 }} />
 
       <Scrollbar>
         <TableContainer sx={{ overflow: 'unset' }}>
