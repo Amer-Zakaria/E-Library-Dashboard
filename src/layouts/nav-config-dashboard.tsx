@@ -13,6 +13,11 @@ export type NavItem = {
 
 export const navData = [
   {
+    title: 'Overview',
+    path: '/overview',
+    icon: icon('ic-analytics'),
+  },
+  {
     title: 'Contents',
     path: '/',
     icon: icon('ic-blog'),

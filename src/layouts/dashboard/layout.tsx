@@ -55,8 +55,9 @@ export function DashboardLayout({
 
   const username = getUserName();
 
-  const filteredNavData =
-    username === 'admin' ? navData : navData.filter((item) => item.title !== 'Uploaders');
+  const filteredNavData = navData.filter(
+    (item) => username === 'admin' || (item.title !== 'Uploaders' && item.title !== 'Overview')
+  );
 
   const renderHeader = () => {
     const headerSlotProps: HeaderSectionProps['slotProps'] = {

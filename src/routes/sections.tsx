@@ -9,10 +9,13 @@ import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgr
 
 import ProtectedRoute from 'src/routes/components/protected_route';
 
+import Overview from 'src/pages/dashboard';
 import { AuthLayout } from 'src/layouts/auth';
 import { DashboardLayout } from 'src/layouts/dashboard';
 
 // ----------------------------------------------------------------------
+
+// export const Overview = lazy(() => import('src/pages/dashboard'));
 
 export const ContentPage = lazy(() => import('src/pages/content'));
 export const CreateContentPage = lazy(() => import('src/pages/create-content'));
@@ -58,6 +61,10 @@ export const routesSection: RouteObject[] = [
       </DashboardLayout>
     ),
     children: [
+      {
+        path: '/overview',
+        element: <ProtectedRoute isAdminOnly Element={<Overview />} />,
+      },
       { index: true, element: <ProtectedRoute Element={<ContentPage />} /> },
       {
         path: '/contents/create',
